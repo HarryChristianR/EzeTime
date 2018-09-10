@@ -1,0 +1,1 @@
+$('#mydivheader').load('http://58.69.9.6/EzeTime/timeclock.php .righthide');

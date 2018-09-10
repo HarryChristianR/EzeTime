@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeTrack</title>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/Footer-Basic.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<head>
+<body onload="startTime()">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="landing.css">
+<link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--TIME-->
+<div class="time">
+<div id="clock"></div>
+<div id="date"></div>
+</div>
+
+</head>
+
+<body>
+<!--SCRIPT FOR TIME-->
+<script>
+function startTime() {
+var today = new Date();
+var hr = today.getHours();
+var min = today.getMinutes();
+var sec = today.getSeconds();
+ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+hr = (hr == 0) ? 12 : hr;
+hr = (hr > 12) ? hr - 12 : hr;
+//Add a zero in front of numbers<10
+hr = checkTime(hr);
+min = checkTime(min);
+sec = checkTime(sec);
+document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var curWeekDay = days[today.getDay()];
+var curDay = today.getDate();
+var curMonth = months[today.getMonth()];
+var curYear = today.getFullYear();
+var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+document.getElementById("date").innerHTML = date;
+
+var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+if (i < 10) {
+i = "0" + i;
+}
+return i;
+}
+</script>
+<nav class="navbar navbar-light navbar-expand-md">
+<div class="container-fluid"><a class="navbar-brand"><img src="heyy.png"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#NavBar"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse"
+id="NavBar">
+<ul class="nav navbar-nav ml-auto"></ul>
+</div>
+</div>
+</nav>
+<div class="footer-basic">
+<footer>
+<ul class="list-inline">
+<li class="list-inline-item"><a href="http://www.netsuite.com/portal/home.shtml"><img src="N.png" id="netsuite"><strong>NETSUITE</strong></a><a href="http://gmail.com/"><img src="G.png" id="gmail"><strong>GMAIL</strong></a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf44Dq_N-kPgEqa4X0KD5mTakZeqq3JEWZdVMqlGYcDgoTFtw/viewform?c=0&amp;w=1"><img src="L.png" id="leave"><strong>LEAVE</strong></a>
+<a
+href="http://goo.gl/forms/rszFEigcWR"><img src="O.png" id="overtime"><strong>OVERTIME</strong></a><a href="https://docs.google.com/forms/d/e/1FAIpQLSfFZ5Z1TCpz6STd4LxVjGTMxQ8NR5mLBE8uBaOBc8PKcWqx8w/viewform?c=0&amp;w=1"><img src="U.png" id="undertime"><strong>UNDERTIME</strong></a>
+<a
+href="#"><img src="D.png" id="datasheet"><strong>DATASHEET</strong></a><a href="#"></a></li>
+<li class="list-inline-item"></li>
+</ul>
+<p class="copyright">Engagis Creatives © 2018</p>
+</footer>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+?>

@@ -1,0 +1,87 @@
+#NavBar {
+  border-radius:5px;
+  min-height:10px;
+  margin-right:20px;
+  margin-top:50px;
+}
+
+#Dv {
+  align-content:center;
+  align-self:center;
+}
+
+img {
+  width:390px;
+  padding:10px;
+  margin-bottom:0px;
+}
+
+#Welcome {
+  min-height:20px;
+  max-height:100px;
+  margin-top:20px;
+}
+
+#Engagis {
+  width:200px;
+}
+
+#Engagis {
+  width:150px;
+  padding:10px;
+  margin-bottom:5px;
+  color:white;
+  text-decoration-color:white;
+}
+
+.footer-basic {
+  margin-top:400px;
+}
+
+#netsuite {
+  width:50px;
+  border-radius:0px;
+}
+
+#leave {
+  width:50px;
+  border-radius:0px;
+  color:black;
+}
+
+#gmail {
+  width:50px;
+  color:white;
+  border-radius:0px;
+}
+
+#overtime {
+  width:50px;
+}
+
+#undertime {
+  width:50px;
+  border-radius:0px;
+}
+
+#datasheet {
+  width:50px;
+  border-radius:0px;
+  opacity: .7;
+}
+
+.list-inline-item:not(:last-child) {
+  color:white;
+  margin-right: 50px;
+  opacity: .7;
+}
+
+#Menu {
+  margin-right:20px;
+  background:ur;
+}
+
+#requests {
+  margin-left:20px;
+}
+
